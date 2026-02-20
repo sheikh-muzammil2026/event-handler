@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    
+  
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+  *{
+      font-family: "Outfit", sans-serif;
+  }
+</style>
+
+</head>
+<body>
+    
+  <div class="home-page bg-base-300 max-w-md mx-auto rounded-md">
+
+    <!-- navbar section -->
+    <section class="navbar  bg-base-100 shadow-sm flex justify-between items-center">
+    <div class="flex gap-1">
+        <div class="logo  w-[60px]">
+          <img src="./assets/logo.png" alt="" >
+        </div>
+       <div  class="flex flex-col"> 
+        <h2 class="font-bold">$<span id="balance">45000</span></h2>
+      <p class="opacity-50">Available Balance</p>
+    </div>
+    </div>
+        
+    <div class="navbar-end">
+      <a class="btn btn-soft  rounded-xl shadow-md"><i class="fas fa-sign-out"></i>Logout</a>
+    </div>
+    </section>
+
+
+    <!-- hero section -->
+     <div class="welcome-msg mt-4 px-[20px]">
+      <h1 class="text-2xl font-bold mb-4">Welcome to pay<span class="text-[#7460FF]">oo</span></h1>
+      <p class="opacity-50">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+    </div>
+
+
+    <section class="hero">
+      
+    <div class="card-container grid grid-cols-3 grid-rows-2 gap-[10px] mt-8 px-[10px]">
+      
+       <button onclick="showOnly('add-money')" class="btn flex-col h-full py-4 text-black  btn-primary btn-soft">
+                <img src="assets/opt-1.png" alt="">
+                <p class="opacity-75">Add Money</p>
+            </button>
+
+        <button onclick="showOnly('cashout')" class="btn flex-col h-full py-4  text-black  btn-primary btn-soft">
+                <img src="assets/opt-2.png" alt="">
+                <p class="opacity-75">Cash out</p>
+        </button>
+
+        <button onclick="showOnly('send-money')" class="btn flex-col h-full   text-black  py-4 btn-primary btn-soft">
+                <img src="assets/opt-3.png" alt="">
+                <p class="opacity-75">Send Money</p>
+        </button>
+        <button onclick="showOnly('get-bonus')" class="btn flex-col h-full  text-black  py-4 btn-primary btn-soft">
+                <img src="assets/opt-4.png" alt="">
+                <p class="opacity-75">Get Bonus</p>
+        </button>
+        <button onclick="showOnly('pay-bill')" class="btn flex-col h-full  text-black  py-4 btn-primary btn-soft">
+                <img src="assets/opt-5.png" alt="">
+                <p class="opacity-75">Pay Bill</p>
+        </button>
+        <button onclick="showOnly('transactions')" class="btn flex-col h-full  text-black  py-4 btn-primary btn-soft">
+                <img src="assets/opt-6.png" alt="">
+                <p class="opacity-75">Transactions</p>
+        </button>
+
+      
+    </div>
+    </section>
+
+
+    <!-- add-money-section -->
+  
+  <section id="add-money" class="add-money-container ml-4 bg-base-200 mx-auto p-5 ">
+    <p class="mb-4 ">Add Money</p>
+  <fieldset class="fieldset  ml-4 mx-auto bg-base-100  ">
+
+  <label class="label font-bold text-black">Select a bank</label>
+  <select class="select select-ghost border bg-base-200 rounded-full">
+    <option placeholder="Select a bank">Select a Bank</option>
+    <option>IBBL</option>
+    <option>City</option>
+    <option>SHJL</option>
+  </select>
+
+    
+  <label class="label text-black font-bold">Bank Account Number</label>
+  <input type="text" class="input border-0 rounded-full bg-base-200" placeholder="Enter account number" />
+
+    <label class="label font-bold text-black">Ammount to Add</label>
+  <input type="text" class="input border-0 rounded-full bg-base-200" placeholder="Enter Amount to Add" />
+
+  <label class="label text-black font-bold">Pin Number</label>
+  <input type="password" class="input border-0 rounded-full bg-base-200" placeholder="Enter 4 Digit pin" />
+
+  <button class="btn rounded-full btn-primary mt-4">Add Money</button>
+</fieldset>
+</section>
+
+
+  <!-- Cash out section -->
+  
+  <section id="cashout" class="cashout-container ml-4 bg-base-200 mx-auto p-5 hidden">
+    <p class="mb-4 font-bold ">Cash Out</p>
+  <fieldset class="fieldset  ml-4 mx-auto bg-base-100  ">
+    
+  <label  class="label text-black font-semibold">Agent Number</label>
+  <input id="agent-number" type="text" class="input border-0 rounded-full bg-base-200" placeholder="Enter 11 digit number" />
+
+    <label  class="label font-semibold text-black">Ammount</label>
+  <input id="cashout-amount" type="text" class="input border-0 rounded-full bg-base-200" placeholder="Enter amount to withdraw" />
+
+  <label class="label text-black font-semibold">Pin Number</label>
+  <input id="cashout-pin" type="password" class="input border-0 rounded-full bg-base-200" placeholder="Enter 4 digit pin number" />
+
+  <button id="btn-withraw" class="btn rounded-full btn-primary mt-4">Withdraw Money</button>
+</fieldset>
+</section>
+
+
+
+  <!--transfer money -->
+  
+  <section id="send-money" class="send-money-container ml-4 bg-base-200 mx-auto py-5 hidden">
+    <p class="mb-4 font-bold ">Transfer Money</p>
+  <fieldset class="fieldset  ml-4 mx-auto bg-base-100 shadow rounded-2xl ">
+    
+  <label class="label text-black font-semibold">User Account Number</label>
+  <input type="text" class="input border-0 rounded-full bg-base-200" placeholder="Enter 11 digit number" />
+
+    <label class="label font-semibold text-black">Ammount</label>
+  <input type="text" class="input border-0 rounded-full bg-base-200" placeholder="Enter amount to withdraw" />
+
+  <label class="label text-black font-semibold">Pin Number</label>
+  <input type="password" class="input border-0 rounded-full bg-base-200" placeholder="Enter 4 digit pin number" />
+
+  <button class="btn rounded-full btn-primary mt-4">Send Now</button>
+</fieldset>
+</section>
+
+  
+  <section id="pay-bill" class="pay-bill-container ml-4 bg-base-200 mx-auto py-5 hidden">
+    <p class="mb-4 ">Pay Bill</p>
+  <fieldset class="fieldset  ml-4 mx-auto bg-base-100  ">
+
+  <label class="label font-bold text-black">Select To Pay</label>
+  <select class="select select-ghost border bg-base-200 rounded-full">
+    <option placeholder="Select a bank">Select a Bank</option>
+    <option>IBBL</option>
+    <option>City</option>
+    <option>SHJL</option>
+  </select>
+
+    
+  <label class="label text-black font-bold">Bank Account Number</label>
+  <input type="text" class="input border-0 rounded-full bg-base-200" placeholder="Enter account number" />
+
+    <label class="label font-bold text-black">Ammount to Add</label>
+  <input type="text" class="input border-0 rounded-full bg-base-200" placeholder="Enter Amount to Add" />
+
+  <label class="label text-black font-bold">Pin Number</label>
+  <input type="password" class="input border-0 rounded-full bg-base-200" placeholder="Enter 4 Digit pin" />
+
+  <button class="btn rounded-full btn-primary mt-4">Add Money</button>
+</fieldset>
+</section>
+
+
+
+    <section id="get-bonus" class="get-bonus-container ml-4 bg-base-200 mx-auto py-5 hidden">
+    <p class="mb-4 font-bold ">Transfer Money</p>
+  <fieldset class="fieldset  ml-4 mx-auto bg-base-100 shadow rounded-2xl ">
+    
+  <label class="label text-black font-semibold">Enter Bonus Coupon</label>
+  <input type="text" class="input border-0 rounded-full bg-base-200" placeholder="Enter your coupon" />
+    </section>
+
+
+    <div id="transactions" class="get-bonus-container ml-4 bg-base-300 mx-auto py-5 hidden">
+      <p class="mb-4 font-bold ">Transactions</p>
+    </div>
+
+    
+  </div>
+  
+    <script src="./script/machin.js"></script>
+<script src="./script/cashout.js"></script>
+    
+</body>
+</html>

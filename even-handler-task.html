@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even handler</title>
+    <style>
+        .btn-bg-changer{
+            border: 1px solid red;
+            padding: 20px;
+            margin-bottom:  10px;
+            max-width: 300px;
+            border-radius: 30px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+          
+        }
+        .styled-btn{
+            padding: 10px;
+            border-radius: 10px;
+        }
+       
+    </style>
+</head>
+<body id="bg">  
+    
+    <!-- 🔹 Task 2: Background Color Changer -->
+    <div class="btn-bg-changer">
+    <button  class="styled-btn" id="red">Red</button>
+    <button  class="styled-btn" id="blue">Blue</button>
+    </div>
+
+    <br> <br> <br>
+     <!-- 🔹 Task 1: Button Click → Text Change -->
+     <p id="text">Nothing</p><br>
+     <button class="styled-btn" id="btn">click me</button>
+      <br><br>
+     <button  class="styled-btn" id="color">change color</button>
+      <br><br>
+      <button  class="styled-btn" id="change-bg" onclick="clickMe()">Bg Green</button>
+
+      <!-- 🔹 Task 3: Input Live Preview -->
+          <br> <br> <br>
+       <label for="comment">Write something</label><br><br>
+       <textarea id="comment" cols="30" rows="10"></textarea>
+       <p class="" id="wrote">You typed: </p>
+
+    <!-- javascript code -->
+    <script>
+        
+        // 🔹 Task 1: Button Click → Text Change
+        document.getElementById("btn").addEventListener("click", function(){
+           document.getElementById("text").innerText = "button clicked";
+           
+        })
+
+        //🔹 Task 1: Button Click → Text Change
+         document.getElementById("color").addEventListener("mouseover", function(){
+             document.getElementById("text").style.color = "red";  
+            })
+
+            
+
+        // 🔹 Task 2: Background Color Changer
+        function clickMe(){
+            document.getElementById("bg").style.backgroundColor = "green";
+        }
+        document.getElementById("change-bg").addEventListener("mouseout", function(){
+            document.getElementById("bg").style.backgroundColor = "white";
+        })
+
+         // 🔹 Task 2: Background Color Changer
+
+         document.getElementById("red").addEventListener("click", function(){
+            document.getElementById("bg").style.backgroundColor = "red";
+        })
+
+         document.getElementById("blue").addEventListener("click", function(){
+            document.getElementById("bg").style.backgroundColor = "blue";
+        })
+
+        // 🔹 Task 3: Input Live Preview 
+         // 1- comment ke input proparty diye function banabo
+         // 2- comment box theke value niye variable e rakhbo
+         // 3- comment box er value ke wrote id te innerText diye bosiye dibo.
+         document.getElementById("comment").addEventListener('input', function(){
+            let textValue = document.getElementById("comment").value;
+            document.getElementById("wrote").innerText = "Your typed: "+ textValue;
+         })
+
+         // 🔹 Task 4: Show/Hide Password
+         //1- checkbox nibo. click korle input tag er attribute change hoye zabe.
+
+
+        
+        
+    </script>
+</body>
+</html>
