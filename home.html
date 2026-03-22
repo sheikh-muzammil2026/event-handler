@@ -29,10 +29,10 @@
 </head>
 <body>
     
-  <div class="home-page bg-base-300 max-w-md mx-auto rounded-md">
+  <div class="home-page bg-base-200 max-w-md mx-auto rounded-md">
 
     <!-- navbar section -->
-    <section class="navbar  bg-base-10l0 shadow-sm flex justify-between items-center">
+    <section class="navbar  bg-base-100 shadow-sm flex justify-between items-center">
     <div class="flex gap-1">
         <div class="logo  w-[60px]">
           <img src="./assets/logo.png" alt="" >
@@ -44,7 +44,7 @@
     </div>
         
     <div class="navbar-end">
-      <a class="btn btn-soft  rounded-xl shadow-md"><i class="fas fa-sign-out"></i>Logout</a>
+      <a class="btn btn-soft bg-white rounded-xl shadow-md"><i class="fas fa-sign-out"></i>Logout</a>
     </div>
     </section>
 
@@ -60,29 +60,29 @@
       
     <div class="card-container grid grid-cols-3 grid-rows-2 gap-[10px] mt-8 px-[10px]">
       
-       <button onclick="showOnly('add-money')" class="btn flex-col h-full py-4 text-black  btn-primary btn-soft">
+       <button onclick="showOnly('add-money')" class="btn flex-col h-full py-4   btn-primary btn-soft">
                 <img src="assets/opt-1.png" alt="">
                 <p class="opacity-75">Add Money</p>
             </button>
 
-        <button onclick="showOnly('cashout')" class="btn flex-col h-full py-4  text-black  btn-primary btn-soft">
+        <button onclick="showOnly('cashout')" class="btn flex-col h-full py-4    btn-primary btn-soft">
                 <img src="assets/opt-2.png" alt="">
                 <p class="opacity-75">Cash out</p>
         </button>
 
-        <button onclick="showOnly('send-money')" class="btn flex-col h-full   text-black  py-4 btn-primary btn-soft">
+        <button onclick="showOnly('send-money')" class="btn flex-col h-full   py-4 btn-primary btn-soft">
                 <img src="assets/opt-3.png" alt="">
                 <p class="opacity-75">Send Money</p>
         </button>
-        <button onclick="showOnly('get-bonus')" class="btn flex-col h-full  text-black  py-4 btn-primary btn-soft">
+        <button onclick="showOnly('get-bonus')" class="btn flex-col h-full   py-4 btn-primary btn-soft">
                 <img src="assets/opt-4.png" alt="">
                 <p class="opacity-75">Get Bonus</p>
         </button>
-        <button onclick="showOnly('pay-bill')" class="btn flex-col h-full  text-black  py-4 btn-primary btn-soft">
+        <button onclick="showOnly('pay-bill')" class="btn flex-col h-full  py-4 btn-primary btn-soft">
                 <img src="assets/opt-5.png" alt="">
                 <p class="opacity-75">Pay Bill</p>
         </button>
-        <button onclick="showOnly('transactions')" class="btn flex-col h-full  text-black  py-4 btn-primary btn-soft">
+        <button onclick="showOnly('transactions')" class="btn flex-col h-full   py-4 btn-primary btn-soft">
                 <img src="assets/opt-6.png" alt="">
                 <p class="opacity-75">Transactions</p>
         </button>
@@ -116,7 +116,7 @@
   <label class="label text-black font-bold">Pin Number</label>
   <input id="add-money-pin" type="password" class="input border-0 rounded-full bg-base-200" placeholder="Enter 4 Digit pin" />
 
-  <button id="btn-add-money" class="btn rounded-full btn-primary mt-4">Add Money</button>
+  <button id="btn-add-money" class="btn rounded-full btn-primary text-white mt-4">Add Money</button>
 </fieldset>
 </section>
 
@@ -136,7 +136,7 @@
   <label class="label text-black font-semibold">Pin Number</label>
   <input id="cashout-pin" type="password" class="input border-0 rounded-full bg-base-200" placeholder="Enter 4 digit pin number" />
 
-  <button id="btn-withraw" class="btn rounded-full btn-primary mt-4">Withdraw Money</button>
+  <button id="btn-withraw" class="btn rounded-full btn-soft btn-primary mt-4">Withdraw Money</button>
 </fieldset>
 </section>
 
@@ -157,7 +157,7 @@
   <label class="label text-black font-semibold">Pin Number</label>
   <input type="password" class="input border-0 rounded-full bg-base-200" placeholder="Enter 4 digit pin number" />
 
-  <button id="btn-send-money" class="btn rounded-full btn-primary mt-4">Send Now</button>
+  <button id="btn-send-money" class="btn rounded-full btn-soft btn-primary mt-4">Send Now</button>
 </fieldset>
 </section>
 
@@ -184,7 +184,7 @@
   <label class="label text-black font-bold">Pin Number</label>
   <input type="password" class="input border-0 rounded-full bg-base-200" placeholder="Enter 4 Digit pin" />
 
-  <button class="btn rounded-full btn-primary mt-4">Add Money</button>
+  <button class="btn rounded-full btn-soft btn-primary mt-4">Add Money</button>
 </fieldset>
 </section>
 
