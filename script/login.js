@@ -6,7 +6,7 @@ document.getElementById("btn-login").addEventListener("click", function(){
     // verify number and pin then access to home page.
     if(mobileNumber === "12345678901" && pin === "1234"){
         alert("Login successful.");
-        window.location.assign("/home.html");
+        window.location.assign("./home.html");
     }else{
         alert("Invalid Mobile number or pin");
     }
