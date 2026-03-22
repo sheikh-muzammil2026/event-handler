@@ -18,6 +18,12 @@
   *{
       font-family: "Outfit", sans-serif;
   }
+ .history-style{
+   padding: 20px;
+   margin: 20px auto;
+   background-color: lightgray ;
+   border-radius: 10px;
+ }
 </style>
 
 </head>
@@ -26,7 +32,7 @@
   <div class="home-page bg-base-300 max-w-md mx-auto rounded-md">
 
     <!-- navbar section -->
-    <section class="navbar  bg-base-100 shadow-sm flex justify-between items-center">
+    <section class="navbar  bg-base-10l0 shadow-sm flex justify-between items-center">
     <div class="flex gap-1">
         <div class="logo  w-[60px]">
           <img src="./assets/logo.png" alt="" >
@@ -102,15 +108,15 @@
 
     
   <label class="label text-black font-bold">Bank Account Number</label>
-  <input type="text" class="input border-0 rounded-full bg-base-200" placeholder="Enter account number" />
+  <input id="bank-acc-number" type="text" class="input border-0 rounded-full bg-base-200" placeholder="Enter account number" />
 
     <label class="label font-bold text-black">Ammount to Add</label>
-  <input type="text" class="input border-0 rounded-full bg-base-200" placeholder="Enter Amount to Add" />
+  <input id="add-money-amount" type="text" class="input border-0 rounded-full bg-base-200" placeholder="Enter Amount to Add" />
 
   <label class="label text-black font-bold">Pin Number</label>
-  <input type="password" class="input border-0 rounded-full bg-base-200" placeholder="Enter 4 Digit pin" />
+  <input id="add-money-pin" type="password" class="input border-0 rounded-full bg-base-200" placeholder="Enter 4 Digit pin" />
 
-  <button class="btn rounded-full btn-primary mt-4">Add Money</button>
+  <button id="btn-add-money" class="btn rounded-full btn-primary mt-4">Add Money</button>
 </fieldset>
 </section>
 
@@ -151,7 +157,7 @@
   <label class="label text-black font-semibold">Pin Number</label>
   <input type="password" class="input border-0 rounded-full bg-base-200" placeholder="Enter 4 digit pin number" />
 
-  <button class="btn rounded-full btn-primary mt-4">Send Now</button>
+  <button id="btn-send-money" class="btn rounded-full btn-primary mt-4">Send Now</button>
 </fieldset>
 </section>
 
@@ -193,15 +199,16 @@
     </section>
 
 
-    <div id="transactions" class="get-bonus-container ml-4 bg-base-300 mx-auto py-5 hidden">
+    <div id="transactions" class="ml-4 bg-base-200 mx-auto p-5 hidden">
       <p class="mb-4 font-bold ">Transactions</p>
+
     </div>
 
     
   </div>
   
     <script src="./script/machin.js"></script>
-<script src="./script/cashout.js"></script>
-    
+	<script src="./script/cashout.js"></script>
+    <script src="./script/add-money.js"></script>
 </body>
 </html>
