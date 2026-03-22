@@ -1,24 +1,24 @@
 // console.log("added cashout file")
 
-document.getElementById("btn-withraw").addEventListener('click', function(){
+document.getElementById("btn-add-money").addEventListener('click', function(){
     //1- get the agent number 
     //2- get the ammount, validate, convert to number
     //3- get the current balance
     //4- calculate new balance.
     //5- get the pin , varify
 
-    let agentNumber = getValueFromInput("agent-number");
+    let accNumber = getValueFromInput("bank-acc-number");
   
-    let cashoutAmount =  Number(getValueFromInput("cashout-amount"));
+    let addAmount =  Number(getValueFromInput("add-money-amount"));
      
     let balance =  getBalance();
       
-    let newBalance = balance -  cashoutAmount;
+    let newBalance = balance + addAmount;
       
 
     
-    if(agentNumber.length != 11 || isNaN(agentNumber)){
-        alert("Agent number should be 11 digit.");
+    if(accNumber.length != 11 || isNaN(accNumber)){
+        alert("Account number should be 11 digit.");
         return;
     }
 
@@ -27,9 +27,9 @@ document.getElementById("btn-withraw").addEventListener('click', function(){
      return;
     }
 
-    let pin = document.getElementById("cashout-pin").value;
+    let pin = document.getElementById("add-money-pin").value;
     if(pin === "1234"){
-        alert("Cash out successful.");
+        alert("Add money successful.");
          setBalance(newBalance);
     }else{
         alert("Invalid pin.");
@@ -41,7 +41,7 @@ document.getElementById("btn-withraw").addEventListener('click', function(){
 		newHistory.classList.add("history-style");
 
      newHistory.innerText = `
-        Cash out successful to ${agentNumber} at ${new Date()}
+        Add money successful from ${accNumber} at ${new Date()}
         `;
     historyContainer.appendChild(newHistory);
     // console.log("agent number :"+ agentNumber +" cash out ammount :"+ cashoutAmount +" balance :"+ balance);
